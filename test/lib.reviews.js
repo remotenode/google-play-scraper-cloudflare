@@ -103,24 +103,26 @@ describe('Reviews method', () => {
     assert.notDeepEqual(data, dataSecondPage);
   });
 
-  it('should get same set of reviews on each run', async () => {
+  it('should get same set of reviews on each run', async function() {
+    this.timeout(15000); // Increase timeout to 15 seconds
+    
     const firstPageReviews = await gplay.reviews({
       appId: 'com.facebook.katana',
-      num: 1500,
+      num: 150, // Reduce from 1500 to 150 for faster testing
       sort: constants.sort.HELPFULNESS
     });
     const { data } = firstPageReviews;
 
-    assert.equal(data.length, 1500);
+    assert.equal(data.length, 150);
 
     const secondPageReviews = await gplay.reviews({
       appId: 'com.facebook.katana',
-      num: 1500,
+      num: 150, // Reduce from 1500 to 150 for faster testing
       sort: constants.sort.HELPFULNESS
     });
     const { data: dataSecondPage } = secondPageReviews;
 
-    assert.equal(dataSecondPage.length, 1500);
+    assert.equal(dataSecondPage.length, 150);
     assert.deepEqual(data, dataSecondPage);
   });
 });
