@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/facundoolano/google-play-scraper"
+    "url": "https://github.com/remotenode/google-play-scraper-cloudflare"
   },
   "keywords": [
     "google",
@@ -22,7 +22,7 @@
   "bugs": {
     "url": "https://github.com/facundoolano/google-play-scraper/issues"
   },
-  "homepage": "https://github.com/facundoolano/google-play-scraper",
+  "homepage": "https://github.com/remotenode/google-play-scraper-cloudflare",
   "dependencies": {
     "debug": "^3.1.0",
     "memoizee": "^0.4.14",
